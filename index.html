@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สรุปเลือกถุงเท้า — EXCELLA Gen 3 vs 361 Degrees</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F3F4F1;
+    --ink:#20211E;
+    --muted:#6B6F69;
+    --line:#E2E4DE;
+    --card:#FFFFFF;
+    --warm:#C25A36;        /* EXCELLA — ร้อน/นวมหนา */
+    --warm-soft:#FBEDE6;
+    --warm-line:#EBCBBA;
+    --cool:#15807C;        /* 361 — เย็น/ระบายอากาศ */
+    --cool-soft:#E4F1EF;
+    --cool-line:#BEDDD9;
+    --ok:#2C7A4B;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans Thai","Noto Sans Thai",system-ui,sans-serif;
+    line-height:1.65;
+    font-size:16px;
+    padding:32px 18px 64px;
+  }
+  .wrap{max-width:860px;margin:0 auto;}
+
+  /* ---- header ---- */
+  .eyebrow{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);margin:0 0 10px;font-weight:600;
+  }
+  h1{
+    font-family:"Anuphan",sans-serif;font-weight:700;
+    font-size:clamp(28px,6vw,42px);line-height:1.12;margin:0 0 12px;
+    letter-spacing:-.01em;
+  }
+  .sub{font-size:17px;color:var(--muted);margin:0;}
+  .sub b{color:var(--ink);font-weight:600;}
+
+  /* ---- verdict ---- */
+  .verdict{
+    margin:30px 0 38px;padding:22px 24px;
+    background:var(--ink);color:#F3F4F1;border-radius:18px;
+    position:relative;overflow:hidden;
+  }
+  .verdict .tag{
+    font-family:"Space Grotesk",sans-serif;font-size:11px;letter-spacing:.16em;
+    text-transform:uppercase;color:#A9B0A6;font-weight:600;margin:0 0 8px;
+  }
+  .verdict p{margin:0;font-size:18px;line-height:1.55;}
+  .verdict .hl-w{color:#F0A07F;font-weight:600;}
+  .verdict .hl-c{color:#6FCFC8;font-weight:600;}
+
+  /* ---- section ---- */
+  section{margin:0 0 42px;}
+  h2{
+    font-family:"Anuphan",sans-serif;font-weight:700;
+    font-size:22px;margin:0 0 4px;letter-spacing:-.005em;
+  }
+  .h2-note{font-size:14px;color:var(--muted);margin:0 0 18px;}
+
+  /* ---- head to head cards ---- */
+  .h2h{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .pcard{
+    background:var(--card);border-radius:18px;padding:22px 22px 24px;
+    border:1px solid var(--line);
+  }
+  .pcard.warm{border-color:var(--warm-line);}
+  .pcard.cool{border-color:var(--cool-line);}
+  .pcard .badge{
+    display:inline-block;font-family:"Space Grotesk",sans-serif;font-weight:600;
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    padding:4px 10px;border-radius:999px;margin-bottom:12px;
+  }
+  .warm .badge{background:var(--warm-soft);color:var(--warm);}
+  .cool .badge{background:var(--cool-soft);color:var(--cool);}
+  .pcard h3{font-family:"Anuphan",sans-serif;font-weight:700;font-size:20px;margin:0 0 2px;}
+  .pcard .kind{font-size:14px;color:var(--muted);margin:0 0 16px;}
+
+  .meter{margin:0 0 18px;}
+  .meter .mlabel{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-bottom:6px;}
+  .meter .track{
+    height:8px;border-radius:999px;position:relative;
+    background:linear-gradient(90deg,var(--cool) 0%,#D8C9A8 50%,var(--warm) 100%);
+  }
+  .meter .dot{
+    position:absolute;top:50%;width:16px;height:16px;border-radius:50%;
+    transform:translate(-50%,-50%);border:3px solid #fff;
+    box-shadow:0 1px 4px rgba(0,0,0,.25);
+  }
+  .warm .meter .dot{left:82%;background:var(--warm);}
+  .cool .meter .dot{left:20%;background:var(--cool);}
+
+  .plist{list-style:none;margin:0 0 16px;padding:0;}
+  .plist li{position:relative;padding-left:22px;margin-bottom:7px;font-size:14.5px;}
+  .plist li::before{
+    content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:50%;
+  }
+  .warm .plist li::before{background:var(--warm);}
+  .cool .plist li::before{background:var(--cool);}
+  .plist li.con{color:var(--muted);}
+  .plist li.con::before{background:#C9CBC5;}
+
+  .bestfor{
+    font-size:13.5px;padding:12px 14px;border-radius:12px;line-height:1.5;
+  }
+  .warm .bestfor{background:var(--warm-soft);}
+  .cool .bestfor{background:var(--cool-soft);}
+  .bestfor b{font-weight:600;}
+
+  /* ---- table ---- */
+  .tablewrap{overflow-x:auto;border-radius:16px;border:1px solid var(--line);background:var(--card);}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px;}
+  thead th{
+    text-align:left;padding:14px 16px;font-family:"Anuphan",sans-serif;font-weight:600;
+    font-size:14px;border-bottom:1px solid var(--line);background:#FAFBF9;
+  }
+  thead th.col-w{color:var(--warm);}
+  thead th.col-c{color:var(--cool);}
+  tbody td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top;}
+  tbody tr:last-child td{border-bottom:none;}
+  td.feat{font-weight:600;color:var(--ink);white-space:nowrap;}
+  .win{color:var(--ok);font-weight:600;}
+
+  /* ---- decision split ---- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px 22px;}
+  .box h4{font-family:"Anuphan",sans-serif;font-weight:600;font-size:16px;margin:0 0 12px;}
+  .pick{display:flex;align-items:baseline;gap:8px;font-size:14.5px;margin-bottom:9px;}
+  .pick .arrow{color:var(--muted);}
+  .pick b{font-weight:600;}
+  .name-w{color:var(--warm);font-weight:600;}
+  .name-c{color:var(--cool);font-weight:600;}
+
+  .callout{
+    margin-top:18px;background:var(--warm-soft);border:1px solid var(--warm-line);
+    border-radius:14px;padding:16px 18px;font-size:14.5px;
+  }
+  .callout b{color:var(--warm);}
+
+  /* split counts */
+  .splitrow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;}
+  .splitcell{border:1px dashed var(--line);border-radius:12px;padding:14px;font-size:14px;text-align:center;}
+  .splitcell .lab{font-size:12px;color:var(--muted);margin-bottom:6px;}
+  .splitcell .val{font-family:"Anuphan",sans-serif;font-weight:600;font-size:15px;}
+  .splitcell .val .name-w{font-weight:700;}
+  .splitcell .val .name-c{font-weight:700;}
+
+  /* ---- cut list ---- */
+  .cut{display:grid;gap:10px;}
+  .cutrow{
+    display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;
+  }
+  .cutrow .x{
+    font-family:"Space Grotesk",sans-serif;font-weight:700;color:#B6453B;font-size:15px;line-height:1.4;
+  }
+  .cutrow .cname{font-weight:600;font-size:15px;margin:0 0 2px;}
+  .cutrow .cwhy{font-size:14px;color:var(--muted);margin:0;}
+
+  /* ---- height tip ---- */
+  .tip{
+    background:var(--cool-soft);border:1px solid var(--cool-line);border-radius:16px;
+    padding:18px 20px;font-size:15px;line-height:1.6;
+  }
+  .tip b{color:var(--cool);}
+  .tip .small{color:var(--muted);font-size:13.5px;display:block;margin-top:6px;}
+
+  /* ---- note ---- */
+  .note{
+    margin-top:40px;padding-top:22px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--muted);line-height:1.6;
+  }
+  .note .nh{font-family:"Space Grotesk",sans-serif;font-weight:600;letter-spacing:.1em;
+    text-transform:uppercase;font-size:11px;color:#9a9e96;margin:0 0 8px;}
+  .note p{margin:0 0 6px;}
+
+  /* ---- responsive ---- */
+  @media (max-width:640px){
+    body{padding:24px 14px 48px;}
+    .h2h,.grid2{grid-template-columns:1fr;}
+    .splitrow{grid-template-columns:1fr;}
+    .verdict p{font-size:16.5px;}
+  }
+
+  /* ---- load anim ---- */
+  @media (prefers-reduced-motion:no-preference){
+    .wrap > *{animation:rise .5s ease both;}
+    .wrap > *:nth-child(2){animation-delay:.04s;}
+    .wrap > *:nth-child(3){animation-delay:.08s;}
+    .wrap > *:nth-child(4){animation-delay:.12s;}
+    @keyframes rise{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:none;}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">บันทึกเลือกถุงเท้า · มิ.ย. 2026</p>
+    <h1>เดินนาน · ยืนนาน · นานๆ วิ่งที</h1>
+    <p class="sub">เหลือ 2 ตัวจริง — <b>EXCELLA Gen 3</b> ปะทะ <b>361 Degrees</b></p>
+  </header>
+
+  <div class="verdict">
+    <p class="tag">สรุปสั้นสุด</p>
+    <p>เอา<b>ทั้ง 2 ตัวคู่กัน</b>ดีกว่าเลือกตัวเดียว — <span class="hl-w">EXCELLA</span> ไว้วันยืนหนัก พื้นแข็ง / <span class="hl-c">361</span> ไว้วันร้อน เดินเยอะ วันวิ่ง มันเสริมกันคนละหน้าที่ ไม่ทับซ้อน</p>
+  </div>
+
+  <section>
+    <h2>หมัดต่อหมัด</h2>
+    <p class="h2-note">สีอุ่น = ตัวที่หนา/ร้อนกว่า · สีเย็น = ตัวที่บาง/ระบายอากาศกว่า</p>
+    <div class="h2h">
+
+      <div class="pcard warm">
+        <span class="badge">ตัวนวม · ร้อนกว่า</span>
+        <h3>EXCELLA Gen 3</h3>
+        <p class="kind">จริงๆ คือถุงเท้าแบด — หนา นุ่ม เด้ง</p>
+        <div class="meter">
+          <div class="mlabel"><span>เย็น</span><span>ร้อนเวลาใส่ในไทย</span></div>
+          <div class="track"><span class="dot"></span></div>
+        </div>
+        <ul class="plist">
+          <li>นวมหนา ซับแรงกระแทกดีที่สุดในกอง</li>
+          <li>มี cutting pattern ซัพพอร์ตเท้า ลดเจ็บนิ้ว</li>
+          <li>ไม่ย้วย ทรงอยู่</li>
+          <li class="con">หนา = ร้อนกว่า กวนใจได้ทุกวันในอากาศไทย</li>
+        </ul>
+        <div class="bestfor"><b>เหมาะกับ:</b> วันยืนยาวๆ พื้นแข็ง เท้าต้องการนวมหนาเป็นหลัก</div>
+      </div>
+
+      <div class="pcard cool">
+        <span class="badge">ตัวเอนกประสงค์ · เย็นกว่า</span>
+        <h3>361 Degrees</h3>
+        <p class="kind">ถุงเท้าวิ่ง/กีฬา — ระบายอากาศดี</p>
+        <div class="meter">
+          <div class="mlabel"><span>เย็น</span><span>ร้อนเวลาใส่ในไทย</span></div>
+          <div class="track"><span class="dot"></span></div>
+        </div>
+        <ul class="plist">
+          <li>เย็นกว่า ซับเหงื่อดี ใส่ทั้งวันสบายในไทย</li>
+          <li>เอนกประสงค์ — เดิน ยืน วิ่ง ได้หมด</li>
+          <li>ทำมาเพื่อวิ่งโดยตรง</li>
+          <li class="con">นวมบางกว่า EXCELLA นิดหน่อย</li>
+        </ul>
+        <div class="bestfor"><b>เหมาะกับ:</b> วันอากาศร้อน เดินเยอะ และวันที่ออกไปวิ่ง</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>ตารางเทียบ</h2>
+    <p class="h2-note">✅ = ฝั่งที่ชนะหัวข้อนั้น</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th>หัวข้อ</th>
+            <th class="col-w">EXCELLA Gen 3</th>
+            <th class="col-c">361 Degrees</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feat">ตัวตนจริงๆ</td>
+            <td>ถุงเท้าแบด หนา นุ่ม เด้ง</td>
+            <td>ถุงเท้าวิ่ง/กีฬา ระบายอากาศ</td>
+          </tr>
+          <tr>
+            <td class="feat">นวมรองยืน/เดิน</td>
+            <td><span class="win">หนา ซับแรงดีกว่า ✅</span></td>
+            <td>โอเค แต่บางกว่า</td>
+          </tr>
+          <tr>
+            <td class="feat">ความเย็น/ระบายอากาศ</td>
+            <td>ร้อนกว่า</td>
+            <td><span class="win">เย็นกว่า ซับเหงื่อดี ✅</span></td>
+          </tr>
+          <tr>
+            <td class="feat">ใส่วิ่ง</td>
+            <td>วิ่งได้ แต่ไม่ได้ทำมาเพื่อวิ่ง</td>
+            <td><span class="win">ทำมาวิ่งโดยตรง ✅</span></td>
+          </tr>
+          <tr>
+            <td class="feat">ใส่ทั้งวันในไทย</td>
+            <td>อาจอบเท้าถ้าร้อนจัด</td>
+            <td><span class="win">สบายกว่าในอากาศร้อน ✅</span></td>
+          </tr>
+          <tr>
+            <td class="feat">ซัพพอร์ต/กันเจ็บนิ้ว</td>
+            <td><span class="win">cutting pattern เฉพาะ ✅</span></td>
+            <td>มีซัพพอร์ตอุ้งเท้า</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2>ถ้าจะเลือก "ตัวเดียว"</h2>
+    <p class="h2-note">ตัดสินจากว่าอะไรคือปัญหาหลักของเรา</p>
+    <div class="grid2">
+      <div class="box">
+        <h4>เลือกตามการใช้งาน</h4>
+        <div class="pick"><span class="arrow">→</span><span>เน้น <b>ยืนนาน ปวดส้น</b> เป็นหลัก = <span class="name-w">EXCELLA</span></span></div>
+        <div class="pick"><span class="arrow">→</span><span>เน้น <b>ใส่ทั้งวันเย็นสบาย + วิ่งบ้าง</b> = <span class="name-c">361</span></span></div>
+      </div>
+      <div class="box">
+        <h4>ถ้าฟันธงตัวเดียวจริงๆ</h4>
+        <div class="pick"><span class="arrow">★</span><span>เลือก <span class="name-c">361</span></span></div>
+        <p style="margin:6px 0 0;font-size:14px;color:var(--muted);line-height:1.55;">เพราะ "ความร้อน" ในไทยเป็นเรื่องเจอทุกวัน และ 361 ยังให้นวม/ซัพพอร์ตพอใช้ได้ ส่วน EXCELLA นวมเทพก็จริง แต่ความร้อนคือจุดที่กวนใจซ้ำๆ ทุกวัน</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>แต่จริงๆ "เอาทั้งคู่" ดีกว่า</h2>
+    <p class="h2-note">ซื้อตัวเดียว 5 คู่ = ติดปัญหาอย่างใดอย่างหนึ่งตลอด (Excella ล้วน → ร้อนทุกวัน / 361 ล้วน → วันยืนหนักนวมไม่พอ)</p>
+    <div class="callout">
+      จัด <b>5 คู่</b> แบบนี้กำลังดี → <span class="name-w">EXCELLA × 2–3</span> &nbsp;+&nbsp; <span class="name-c">361 × 2–3</span>
+      <div class="splitrow">
+        <div class="splitcell">
+          <div class="lab">อยากเน้นยืน</div>
+          <div class="val"><span class="name-w">EXCELLA 3</span> / <span class="name-c">361 2</span></div>
+        </div>
+        <div class="splitcell">
+          <div class="lab">อยากเน้นเย็นสบาย</div>
+          <div class="val"><span class="name-c">361 3</span> / <span class="name-w">EXCELLA 2</span></div>
+        </div>
+      </div>
+      <p style="margin:14px 0 0;font-size:14px;">ลองใส่จริงสัก 1 อาทิตย์ แล้วค่อยตัดสินว่าชอบฝั่งไหนมากกว่า รอบหน้าซื้อฝั่งนั้นเพิ่ม</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>เรื่องความยาว</h2>
+    <div class="tip">
+      สำหรับเดิน/ยืน/วิ่งสลับในไทย → <b>Quarter (ข้อกลาง)</b> ดีสุด
+      <span class="small">เย็นกว่าข้อยาว (crew) · คลุมมากกว่าข้อสั้น (no-show)</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>ตัวที่ตัดออก (และทำไม)</h2>
+    <p class="h2-note">3 ตัวที่เหลือจากลิสต์เดิม — ไม่ตรงโจทย์ "เดินนาน ยืนนาน" เท่า 2 ตัวบน</p>
+    <div class="cut">
+      <div class="cutrow">
+        <div class="x">✕</div>
+        <div>
+          <p class="cname">Yuedpao Crew (Odor Control)</p>
+          <p class="cwhy">ใส่ชิล/ทำงานดี แต่ข้อยาว + ผ้าฝ้าย = ร้อนสุดในกอง ไม่เหมาะยืนนานเหงื่อเยอะ</p>
+        </div>
+      </div>
+      <div class="cutrow">
+        <div class="x">✕</div>
+        <div>
+          <p class="cname">Decathlon Run 900 แยกนิ้ว</p>
+          <p class="cwhy">เอาเฉพาะถ้านิ้วเท้าพองบ่อย — ตัวบาง + ข้อซ่อน นวมรองยืนแทบไม่มี เป็นสายวิ่งล้วน</p>
+        </div>
+      </div>
+      <div class="cutrow">
+        <div class="x">✕</div>
+        <div>
+          <p class="cname">SOLOEVER</p>
+          <p class="cwhy">เช็คคุณภาพจริงไม่ได้ มีแต่คำในหน้าร้านเอง งบถูก — ซื้อมาลองคู่เดียวพอ อย่าทุ่มเยอะ</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="note">
+    <p class="nh">หมายเหตุ</p>
+    <p>· วิเคราะห์จาก<b>ชื่อรุ่น + ข้อมูลที่เสิร์ชยืนยันได้</b> ไม่ได้ดูจากรูปจริง (รูปไม่ได้เข้ามาในแชท) — ถ้ารุ่นที่ขายต่างจากนี้ (ความยาว/ความหนา) ให้ยึดของจริงเป็นหลัก</p>
+    <p>· ตัด<b>คำโฆษณา</b>ทิ้งหมด (ขายแล้ว 10k+, อันดับ 1, คะแนน 9.5/10) — พวกนี้เช็คไม่ได้ ไม่เอามาตัดสินใจ</p>
+  </div>
+
+</div>
+</body>
+</html>
